@@ -65,7 +65,7 @@ Create the list passing the node names or node names keywords to remove them fro
 
     $ python nodes_extract.py -l {list} -d {model_dir} -s {save_dir}
 
-### Step 2: Freeze the graph to be served on GCP
+### Step 3: Freeze the graph to be served on GCP
 
     $ python freeze_graph.py -d {model_dir} -i  {input_node} -o {outout_node} -n  {node_list} -s {save_dir}
 
