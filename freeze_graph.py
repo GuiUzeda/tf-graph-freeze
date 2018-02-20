@@ -8,21 +8,19 @@ import pickle
 
 
 def main(args):
-    print(args.dir)
+   
     if not os.path.exists(args.dir):
         raise Exception("The path provided to save is not valid")
 
     model_dir = args.dir
 
     export_dir = args.freeze
+    print(args.nodes)
     if not args.nodes:
         raise Exception("A Pickled node list must be provided")
-    if os.path.exists(args.nodes):
-        nodes = pickle.load(open(args.nodes, "rb"))
-    else:
-        print 'W: Nodes not specified or invilid picle file'
-        print 'W: Using all nodes in the graph'
-        nodes = args.nodes
+
+    nodes = pickle.load(open(args.nodes, "rb"))
+
     declared_inputs = args.inputs
     declared_outputs = args.outputs
     inputs = {}
@@ -50,6 +48,7 @@ def main(args):
             name = op.name
             ops_list.append(name)
         for n in nodes:
+            print n
             if n not in ops_list:
                 raise Exception("Nodes provided are not in the graph")
         
@@ -91,7 +90,7 @@ if __name__ == "__main__":
     cwd = os.getcwd()
     parser = argparse.ArgumentParser(description='')
     parser.add_argument("-d", "--dir", help="Tensorflow domel's directory",
-                        default=os.path.join(cwd, "graph"))
+                        default=os.path.join(cwd, "model_example"))
     parser.add_argument("-f", "--freeze", help="Directory where the frozen graph will be saved",
                         default=os.path.join(cwd, "frozen_graph"))
     parser.add_argument(
@@ -102,5 +101,5 @@ if __name__ == "__main__":
         "-n", "--nodes", help="Pickled file wich contains the nodes to be kept", required=False)
 
     args = parser.parse_args()
-    print(args)
+
     main(args)
