@@ -1,0 +1,65 @@
+
+# Created by https://www.gitignore.io/api/images,compressed
+### Compressed ###
+*.7z *.deb *.gz *.pkg *.rar *.rpm *.sit *.sitx *.tar *.zip *.zipx
+### Images ###
+# JPEG
+*.jpg *.jpeg *.jpe *.jif *.jfif *.jfi
+# JPEG 2000
+*.jp2 *.j2k *.jpf *.jpx *.jpm *.mj2
+# JPEG XR
+*.jxr *.hdp *.wdp
+# Graphics Interchange Format
+*.gif
+# RAW
+*.raw
+# Web P
+*.webp
+# Portable Network Graphics
+*.png
+# Animated Portable Network Graphics
+*.apng
+# Multiple-image Network Graphics
+*.mng
+# Tagged Image File Format
+*.tiff *.tif
+# Scalable Vector Graphics
+*.svg *.svgz
+# Portable Document Format
+*.pdf
+# X BitMap
+*.xbm
+# BMP
+*.bmp *.dib
+# ICO
+*.ico
+# 3D Images
+*.3dm *.max
+# End of https://www.gitignore.io/api/images,compressed
+
+
+# Created by https://www.gitignore.io/api/virtualenv
+
+### VirtualEnv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Mm]an
+[Ss]cripts
+[Tt]cl
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
+
+frozen_graph
+graph
+graph
+*.json
+*.csv
+# End of https://www.gitignore.io/api/virtualenv
