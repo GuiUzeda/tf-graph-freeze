@@ -14,7 +14,7 @@ def main(args):
 
     model_dir = args.dir
 
-    export_dir = args.freeze
+    export_dir = args.save_dir
     print(args.nodes)
     if not args.nodes:
         raise Exception("A Pickled node list must be provided")
@@ -88,10 +88,10 @@ def main(args):
 
 if __name__ == "__main__":
     cwd = os.getcwd()
-    parser = argparse.ArgumentParser(description='')
-    parser.add_argument("-d", "--dir", help="Tensorflow domel's directory",
+    parser = argparse.ArgumentParser(description='A simple Graph freezer for Tensorflow on GCP')
+    parser.add_argument("-d", "--dir", help="Tensorflow model's directory",
                         default=os.path.join(cwd, "model_example"))
-    parser.add_argument("-f", "--freeze", help="Directory where the frozen graph will be saved",
+    parser.add_argument("-s", "--save_dir", help="Directory where the frozen graph will be saved",
                         default=os.path.join(cwd, "frozen_graph"))
     parser.add_argument(
         "-i", "--inputs", help="Input tensor list", required=True, nargs="*")

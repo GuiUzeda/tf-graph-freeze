@@ -8,7 +8,7 @@ import pickle
 
 
 def main(args):
-    model_dir = args.model
+    model_dir = args.dir
     nodes_list = args.list
     save_dir = args.save_dir
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='Generate a pickled nodes list from the provided node')
     parser.add_argument("-l", "--list", help="List of words in nodes names to be excluded. If omited, all nodes will be kept", nargs="*")
-    parser.add_argument("-m", "--model", help="Print and save a list of all nodes in the provided graph directory",
+    parser.add_argument("-d", "--dir", help="Directory to save the nodes list",
                         default=os.path.join(cwd, "model_example"))
     parser.add_argument("-s", "--save_dir", help="Save dir for the generated list. If 'None' is provided, no list will be saved",
                         default=os.path.join(cwd))

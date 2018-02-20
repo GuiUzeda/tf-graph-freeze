@@ -29,11 +29,11 @@ def main(args):
 
 if __name__ == "__main__":
     cwd = os.getcwd()
-    parser = argparse.ArgumentParser(description='')
+    parser = argparse.ArgumentParser(description='This module exports the graph to be visualized on Tensorboard')
     parser.add_argument("-d", "--dir", help="Tensorflow models's directory",
                         default=os.path.join(cwd, "model_example"))
 
-    parser.add_argument("-s", "--savedir", help="Logdir tensorboard",
+    parser.add_argument("-s", "--savedir", help="Logdir of tensorboard",
                     default=os.path.join(cwd, "model_example"))
     args = parser.parse_args()
 
