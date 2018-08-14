@@ -17,7 +17,7 @@ This module exports the graph to be visualized on Tensorboard
     -d, --dir             Tensorflow models's directory
     -s, --savedir         Logdir of tensorboard
 
-## Module 2: "nodes_extract.py":
+## Module 2: "nodes_list.py":
 
 Generate a pickled nodes list from the provided node
 
@@ -55,7 +55,7 @@ Extract the model to tensorboard:
 
     $ python model_to_tensorboard.py -d {model_dir} -s {save_dir}
 
-Run Tensorboar
+Run Tensorboard
 
     $ tensorboard --logdir {save_dir}
 
