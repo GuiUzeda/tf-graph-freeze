@@ -17,7 +17,7 @@ This module exports the graph to be visualized on Tensorboard
     -d, --dir             Tensorflow models's directory
     -s, --savedir         Logdir of tensorboard
 
-## Module 2: "nodes_list.py":
+## Module 2: "nodes_extract.py":
 
 Generate a pickled nodes list from the provided node
 
@@ -31,7 +31,7 @@ Generate a pickled nodes list from the provided node
                             Save dir for the generated list. If 'None' is
                             provided, no list will be saved
 
-## Module 3: "nodes_extract.py":
+## Module 3: "freeze_graph.py":
 
 A simple Graph freezer for Tensorflow on GCP
 
