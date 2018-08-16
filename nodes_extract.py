@@ -30,6 +30,8 @@ def main(args):
             name = op.name
             if nodes_list:
                 filter_result = filter(lambda x: x.lower() in name.lower(), nodes_list)
+            else:
+                filter_result = name
             if len(filter_result) == 0:
                 ops_list.append(name)
                 print name
