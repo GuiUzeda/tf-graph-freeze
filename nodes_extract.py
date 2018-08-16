@@ -28,8 +28,9 @@ def main(args):
         ops_list = []
         for op in tf.get_default_graph().get_operations():
             name = op.name
-            fileter_result = filter(lambda x: x.lower() in name.lower(), nodes_list)
-            if len(fileter_result) == 0:
+            if nodes_list:
+                filter_result = filter(lambda x: x.lower() in name.lower(), nodes_list)
+            if len(filter_result) == 0:
                 ops_list.append(name)
                 print name
 
